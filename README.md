@@ -11,7 +11,15 @@ docker-composer install: https://docs.docker.com/compose/install/
 <code>git clone https://github.com/FriendSoftwareLabs/friendchat</code>           
 <code>docker-compose up --build</code>      
 
-NOTE: Add <code>myfriendup.com</code> and <code>friendchat</code> in /etc/hosts            
+NOTE: Add     
+``` 
+....       
+127.0.0.1     myfriendup.com           
+127.0.0.1     friendup            
+127.0.0.1     coturn        
+....          
+```           
+in /etc/hosts            
      
 ## Useful project info:
 All settings files can be found in <code>./docker/</code> folder, inside folder, everything is split per app/dependency. (research folder)         

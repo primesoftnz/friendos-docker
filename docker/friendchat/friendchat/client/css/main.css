@@ -1,0 +1,17 @@
+
+.module-logo {
+    width                      : 3em;
+    height                     : 2.5em;
+    background-color           : #444;
+    padding                    : 2px;
+    border-top-right-radius    : 2px;
+    border-bottom-right-radius : 2px;
+}
+
+.logo {
+    height              : 100%;
+    width               : 100%;
+    background-repeat   : no-repeat;
+    background-size     : contain;
+    background-position : center;
+}

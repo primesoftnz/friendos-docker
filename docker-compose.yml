@@ -1,0 +1,98 @@
+version: "3.7"
+
+services:
+    mariadb:
+        image: mariadb
+        restart: always
+        container_name: mariadb_friendup
+        hostname: mariadb
+        networks:
+            - friendup-network
+        environment:
+            MYSQL_ROOT_PASSWORD: passw0rd2020
+        ports: 
+            - "3306:3306"
+        volumes:
+            - ./docker/mariadb:/docker-entrypoint-initdb.d/
+            - ./db-data:/var/lib/mysql
+    nginx:
+        build:
+            context: ./docker/nginx
+            dockerfile: ./Dockerfile
+        image: nginx
+        hostname: nginx
+        container_name: nginx_friendup
+        ports:
+            - 80:80
+            - 443:443
+        volumes: 
+            - .:/var/www/html
+            - ./docker/friendup/cfg/crt:/var/www/html/friendup/build/cfg/crt
+            - ./docker/nginx/sites-available:/etc/nginx/sites-enabled
+        networks: 
+            - friendup-network
+        depends_on: 
+            - friendup
+            - friendchat
+    friendup:
+        build:
+            context: ./docker/friendup
+            dockerfile: ./Dockerfile
+        image: friendup
+        restart: always
+        container_name: friendup_core
+        hostname: friendup
+        extra_hosts:
+            - "myfriendup.com:10.0.2.15"
+        networks:
+            - friendup-network
+        depends_on:
+            - mariadb
+        ports:
+            - "6500:6500"
+            - "6498:6498"
+            - "6502:6502"
+        volumes:
+            # FriendOS and Friend configuration
+            - ./friendup:/var/www/html/friendup
+            - ./docker/friendup/cfg:/var/www/html/friendup/build/cfg
+            # FriendChat app
+            - ./docker/friendchat/friendchat/client:/var/www/html/friendup/build/resources/webclient/apps/FriendChat
+    friendchat:
+        build:
+            context: ./docker/friendchat
+            dockerfile: ./Dockerfile
+        image: friendchat
+        restart: always
+        container_name: friendchat
+        hostname: friendchat
+        networks:
+            - friendup-network
+        depends_on: 
+            - friendup
+            - mariadb
+        ports:
+            - "3000:3000"
+            - "3001:3001"
+            - "27970:27970"
+        volumes:
+            - ./presence:/var/www/html/presence 
+            - ./friendchat:/var/www/html/friendchat
+    coturn:
+        build:
+            context: ./docker/coturn
+            dockerfile: ./Dockerfile
+        image: coturn
+        restart: always
+        container_name: coturn
+        hostname: coturn
+        networks:
+            - friendup-network
+        ports:
+            - "4443:4443"
+            - "8080:8080"
+        volumes:
+            - ./coturn:/var/www/html
+            - ./docker/certs:/etc/certs
+networks:
+    friendup-network:

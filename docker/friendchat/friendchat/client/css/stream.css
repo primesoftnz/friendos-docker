@@ -1,0 +1,173 @@
+
+#users-list {
+	transition : width 0.2s;
+}
+
+#stream-container {
+	position         : relative;
+	background-color : rgb( 15, 15, 15 );
+}
+
+#stream-container {
+	position: relative;
+}
+
+#stream {
+	position : absolute;
+	top      : 0;
+	right    : 0;
+	bottom   : 0;
+	left     : 0;
+	height   : 100%;
+	width    : 100%;
+}
+
+#source,
+#sink {
+	height: 100%;
+}
+
+#source-media-container {
+	position : relative;
+	overflow : hidden;
+	height   : 100%;
+	width    : 100%;
+}
+
+#source-media-container .video {
+	-webkit-transform : translateZ( 0 );
+	position : absolute;
+	top : 50%;
+	left: 50%;
+	transform : translate( -50%, -50% );
+}
+
+
+#source .stream-ui,
+#sink .stream-ui {
+	/*
+	display : none;
+	opacity: 0;
+	*/
+	transition : opacity 0.2s;
+}
+
+.avatar {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+#source-media-container .avatar {
+	height: 100%;
+	width: 100%;
+	opacity: 0.3;
+}
+
+#user-stuff {
+	border-bottom : 0.1em solid transparent;
+}
+
+#chat-container {
+	width    : 20em;
+	position : relative;
+}
+
+.peer {
+	position : relative;
+	padding  : 0.25em;
+}
+
+.peer .avatar {
+	height       : 2em;
+	width        : 2em;
+	margin-right : 0.4em;
+}
+
+.peer .name {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+#waiting-for-container {
+	
+}
+
+#waiting-for-stream-fritz {
+	width               : 80%;
+	height              : 80%;
+	background-image    : url(/webclient/apps/FriendChat/gfx/Waiting4Stream.png);
+	background-size     : contain;
+	background-repeat   : no-repeat;
+	background-position : center center;
+}
+
+#waiting-for-stream-dots {
+	
+}
+
+#main-content {
+	min-width: calc( 2.5em + 4px );
+}
+
+#stream-ui {
+	transition : opacity 0.1s;
+}
+
+#stream-ui.show-panes {
+	
+}
+
+.show-ui #stream-ui,
+.show-ui #popped-ui,
+.show-ui .grid-ui,
+.show-ui .list-ui {
+	opacity: 1;
+	transition : opacity 0.2s;
+}
+
+#video-toggle-btn {
+	margin-left : 0.5em;
+}
+
+.landscape {
+	
+}
+
+.portrait {
+	
+}
+
+.width {
+	width : auto;
+	height : 100%;
+}
+
+.height {
+	width : 100%;
+	height : auto;
+}
+
+/* stream state */
+
+#stream-state-ui {
+	height : 100%;
+}
+
+#stream-state-content {
+	padding : 1em;
+	border-radius: 0.2em;
+}
+
+#stream-state {
+	margin-top : 0.5em;
+}
+
+.stream-state-item {
+	
+}
+
+.stream-state-item .stream-state-desc {
+	padding-left : 0.5em;
+}

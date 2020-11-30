@@ -1,0 +1,690 @@
+{
+    "Startup": {
+        "Name": "Startup",
+        "API": "v1.0",
+        "Version": "0.1",
+        "Author": "Friend Software Labs",
+        "Category": "System\/Preferences",
+        "Init": "Scripts\/startup.js",
+        "E-mail": "titlestad@friendos.com",
+        "UserGroups": [
+            "User",
+            "Admin"
+        ],
+        "Permissions": [
+            "Door Local",
+            "Module System",
+            "Module Files"
+        ],
+        "Description": "Startup manager. Manage applications that start when you start your user session.",
+        "Trusted": "yes"
+    },
+    "FriendChat": {
+        "Name": "FriendChat",
+        "API": "v1",
+        "Version": "2.44.91",
+        "Author": "Espen Olsen",
+        "Trusted": "yes",
+        "Category": "Internet",
+        "Path": "resources\/webclient\/apps\/FriendChat\/",
+        "E-mail": "eo@friendup.cloud",
+        "Description": "Friend Chat is a chat integration platform for Friend. It is built to make it fairly straightforward to add access to 3rd party chat APIs.",
+        "Permissions": [
+            "Module System",
+            "Module Files",
+            "Door Local"
+        ]
+    },
+    "Admin": {
+        "Name": "Admin",
+        "API": "v1",
+        "Version": "0.49.06",
+        "Author": "Friend Software Labs",
+        "Category": "System",
+        "Init": "Scripts\/admin.js",
+        "E-mail": "developer@friendup.cloud",
+        "Description": "The Friend Admin panel.",
+        "Permissions": [
+            "Door Local",
+            "Module System",
+            "Module Files",
+            "Module Roles",
+            "Module Print",
+            "Module Friendstore",
+            "Module Dock",
+            "Module Mitra"
+        ],
+        "AppPermissions": [
+            {
+                "id": "PERM_USER_GLOBAL"
+            },
+            {
+                "id": "PERM_USER_CREATE_GLOBAL"
+            },
+            {
+                "id": "PERM_USER_READ_GLOBAL"
+            },
+            {
+                "id": "PERM_USER_UPDATE_GLOBAL"
+            },
+            {
+                "id": "PERM_USER_DELETE_GLOBAL"
+            },
+            {
+                "id": "PERM_USER_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_USER_CREATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_USER_READ_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_USER_UPDATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_USER_DELETE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_WORKGROUP_GLOBAL"
+            },
+            {
+                "id": "PERM_WORKGROUP_CREATE_GLOBAL"
+            },
+            {
+                "id": "PERM_WORKGROUP_READ_GLOBAL"
+            },
+            {
+                "id": "PERM_WORKGROUP_UPDATE_GLOBAL"
+            },
+            {
+                "id": "PERM_WORKGROUP_DELETE_GLOBAL"
+            },
+            {
+                "id": "PERM_WORKGROUP_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_WORKGROUP_CREATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_WORKGROUP_READ_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_WORKGROUP_UPDATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_WORKGROUP_DELETE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_ROLE_GLOBAL"
+            },
+            {
+                "id": "PERM_ROLE_CREATE_GLOBAL"
+            },
+            {
+                "id": "PERM_ROLE_READ_GLOBAL"
+            },
+            {
+                "id": "PERM_ROLE_UPDATE_GLOBAL"
+            },
+            {
+                "id": "PERM_ROLE_DELETE_GLOBAL"
+            },
+            {
+                "id": "PERM_ROLE_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_ROLE_CREATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_ROLE_READ_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_ROLE_UPDATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_ROLE_DELETE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_STORAGE_GLOBAL"
+            },
+            {
+                "id": "PERM_STORAGE_CREATE_GLOBAL"
+            },
+            {
+                "id": "PERM_STORAGE_READ_GLOBAL"
+            },
+            {
+                "id": "PERM_STORAGE_UPDATE_GLOBAL"
+            },
+            {
+                "id": "PERM_STORAGE_DELETE_GLOBAL"
+            },
+            {
+                "id": "PERM_STORAGE_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_STORAGE_CREATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_STORAGE_READ_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_STORAGE_UPDATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_STORAGE_DELETE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_APPLICATION_GLOBAL"
+            },
+            {
+                "id": "PERM_APPLICATION_CREATE_GLOBAL"
+            },
+            {
+                "id": "PERM_APPLICATION_READ_GLOBAL"
+            },
+            {
+                "id": "PERM_APPLICATION_UPDATE_GLOBAL"
+            },
+            {
+                "id": "PERM_APPLICATION_DELETE_GLOBAL"
+            },
+            {
+                "id": "PERM_APPLICATION_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_APPLICATION_CREATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_APPLICATION_READ_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_APPLICATION_UPDATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_APPLICATION_DELETE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_GLOBAL"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_CREATE_GLOBAL"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_READ_GLOBAL"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_UPDATE_GLOBAL"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_DELETE_GLOBAL"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_CREATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_READ_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_UPDATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_DELETE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_TEMPLATE_GLOBAL"
+            },
+            {
+                "id": "PERM_TEMPLATE_CREATE_GLOBAL"
+            },
+            {
+                "id": "PERM_TEMPLATE_READ_GLOBAL"
+            },
+            {
+                "id": "PERM_TEMPLATE_UPDATE_GLOBAL"
+            },
+            {
+                "id": "PERM_TEMPLATE_DELETE_GLOBAL"
+            },
+            {
+                "id": "PERM_TEMPLATE_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_TEMPLATE_CREATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_TEMPLATE_READ_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_TEMPLATE_UPDATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_TEMPLATE_DELETE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            }
+        ],
+        "Trusted": "yes"
+    },
+    "Dock": {
+        "Name": "Dock",
+        "API": "v1",
+        "Version": "1.2rc1",
+        "Author": "Hogne Titlestad",
+        "Category": "System\/Preferences",
+        "E-mail": "hogne@ideverket.no",
+        "MimeTypes": {
+            "termlog": "open %f"
+        },
+        "Init": "Scripts\/dock.js",
+        "Description": "A versatile dock editor. Manage your icon launchers and change the look and feel of your dock.",
+        "Permissions": [
+            "Door Local",
+            "Module System",
+            "Module Files",
+            "Module Dock"
+        ],
+        "Trusted": "yes"
+    },
+    "Settings": {
+        "Name": "Settings",
+        "API": "v1.0",
+        "Version": "0.1",
+        "Author": "Friend Software Labs",
+        "Category": "System",
+        "Init": "settings.js",
+        "Description": "Set up your Friend Workspace",
+        "UserGroups": [
+            "Admin",
+            "User"
+        ],
+        "HideInCatalog": "yes",
+        "Permissions": [
+            "Door Local",
+            "Module System",
+            "Module Files"
+        ],
+        "Trusted": "yes"
+    },
+    "Server": {
+        "Name": "Server settings",
+        "API": "v1",
+        "Version": "0.1",
+        "Author": "Friend Software Labs",
+        "Category": "System",
+        "Init": "Scripts\/server.js",
+        "HideInCatalog": "yes",
+        "E-mail": "developer@friendos.com",
+        "MimeTypes": {
+            "serversetting": "open %f"
+        },
+        "UserGroups": [
+            "Admin"
+        ],
+        "Permissions": [
+            "Door Local",
+            "Module System",
+            "Module Files"
+        ],
+        "Trusted": "yes"
+    },
+    "FriendShell": {
+        "Name": "FriendShell",
+        "API": "v1",
+        "Version": "0.5",
+        "Author": "Hogne Titlestad",
+        "Category": "System",
+        "Init": "Scripts\/shell.js",
+        "E-mail": "hogne@ideverket.no",
+        "MimeTypes": {
+            "termlog": "open %f"
+        },
+        "Description": "Command Line Interface for the Friend Workspace.",
+        "Permissions": [
+            "Door Local",
+            "Module System",
+            "Module Files"
+        ],
+        "Trusted": "yes"
+    },
+    "Account": {
+        "Name": "Account",
+        "API": "v1",
+        "Version": "0.1",
+        "Author": "Friend Software Labs",
+        "Category": "System\/Preferences",
+        "Init": "Scripts\/account.js",
+        "E-mail": "info@friendos.com",
+        "Description": "Your user account editor. Set your username and password.",
+        "Permissions": [
+            "Door Local",
+            "Module System",
+            "Module Files"
+        ],
+        "Trusted": "yes"
+    },
+    "System": {
+        "Name": "System",
+        "API": "v1",
+        "Version": "0.49.22",
+        "Author": "Friend Software Labs",
+        "Category": "System",
+        "Init": "Scripts\/system.js",
+        "E-mail": "developer@friendup.cloud",
+        "Description": "The Friend System panel.",
+        "Permissions": [
+            "Door Local",
+            "Module System",
+            "Module Files",
+            "Module Roles",
+            "Module Print",
+            "Module Friendstore",
+            "Module Dock",
+            "Module Mitra"
+        ],
+        "AppPermissions": [
+            {
+                "id": "PERM_USER_GLOBAL"
+            },
+            {
+                "id": "PERM_USER_CREATE_GLOBAL"
+            },
+            {
+                "id": "PERM_USER_READ_GLOBAL"
+            },
+            {
+                "id": "PERM_USER_UPDATE_GLOBAL"
+            },
+            {
+                "id": "PERM_USER_DELETE_GLOBAL"
+            },
+            {
+                "id": "PERM_USER_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_USER_CREATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_USER_READ_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_USER_UPDATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_USER_DELETE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_WORKGROUP_GLOBAL"
+            },
+            {
+                "id": "PERM_WORKGROUP_CREATE_GLOBAL"
+            },
+            {
+                "id": "PERM_WORKGROUP_READ_GLOBAL"
+            },
+            {
+                "id": "PERM_WORKGROUP_UPDATE_GLOBAL"
+            },
+            {
+                "id": "PERM_WORKGROUP_DELETE_GLOBAL"
+            },
+            {
+                "id": "PERM_WORKGROUP_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_WORKGROUP_CREATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_WORKGROUP_READ_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_WORKGROUP_UPDATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_WORKGROUP_DELETE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_ROLE_GLOBAL"
+            },
+            {
+                "id": "PERM_ROLE_CREATE_GLOBAL"
+            },
+            {
+                "id": "PERM_ROLE_READ_GLOBAL"
+            },
+            {
+                "id": "PERM_ROLE_UPDATE_GLOBAL"
+            },
+            {
+                "id": "PERM_ROLE_DELETE_GLOBAL"
+            },
+            {
+                "id": "PERM_ROLE_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_ROLE_CREATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_ROLE_READ_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_ROLE_UPDATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_ROLE_DELETE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_STORAGE_GLOBAL"
+            },
+            {
+                "id": "PERM_STORAGE_CREATE_GLOBAL"
+            },
+            {
+                "id": "PERM_STORAGE_READ_GLOBAL"
+            },
+            {
+                "id": "PERM_STORAGE_UPDATE_GLOBAL"
+            },
+            {
+                "id": "PERM_STORAGE_DELETE_GLOBAL"
+            },
+            {
+                "id": "PERM_STORAGE_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_STORAGE_CREATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_STORAGE_READ_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_STORAGE_UPDATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_STORAGE_DELETE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_APPLICATION_GLOBAL"
+            },
+            {
+                "id": "PERM_APPLICATION_CREATE_GLOBAL"
+            },
+            {
+                "id": "PERM_APPLICATION_READ_GLOBAL"
+            },
+            {
+                "id": "PERM_APPLICATION_UPDATE_GLOBAL"
+            },
+            {
+                "id": "PERM_APPLICATION_DELETE_GLOBAL"
+            },
+            {
+                "id": "PERM_APPLICATION_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_APPLICATION_CREATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_APPLICATION_READ_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_APPLICATION_UPDATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_APPLICATION_DELETE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_GLOBAL"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_CREATE_GLOBAL"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_READ_GLOBAL"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_UPDATE_GLOBAL"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_DELETE_GLOBAL"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_CREATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_READ_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_UPDATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_LOOKNFEEL_DELETE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_TEMPLATE_GLOBAL"
+            },
+            {
+                "id": "PERM_TEMPLATE_CREATE_GLOBAL"
+            },
+            {
+                "id": "PERM_TEMPLATE_READ_GLOBAL"
+            },
+            {
+                "id": "PERM_TEMPLATE_UPDATE_GLOBAL"
+            },
+            {
+                "id": "PERM_TEMPLATE_DELETE_GLOBAL"
+            },
+            {
+                "id": "PERM_TEMPLATE_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_TEMPLATE_CREATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_TEMPLATE_READ_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_TEMPLATE_UPDATE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            },
+            {
+                "id": "PERM_TEMPLATE_DELETE_IN_WORKGROUP",
+                "parameter": "FRIEND_WORKGROUP"
+            }
+        ],
+        "Trusted": "yes"
+    },
+    "Users": {
+        "Name": "Users",
+        "API": "v1.0",
+        "Version": "0.1",
+        "Author": "Hogne Titlestad",
+        "Category": "System\/Preferences",
+        "E-mail": "hogne@ideverket.no",
+        "UserGroups": [
+            "Admin"
+        ],
+        "HideInCatalog": "yes",
+        "Permissions": [
+            "Door Local",
+            "Module System",
+            "Module Files"
+        ],
+        "Description": "Manage users and groups.",
+        "Trusted": "yes"
+    }
+}

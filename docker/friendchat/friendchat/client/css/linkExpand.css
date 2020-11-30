@@ -1,0 +1,58 @@
+.link-expand {
+	overflow: hidden;
+	white-space : normal;
+}
+
+.link-expand-ui {
+	margin-bottom : 2px;
+}
+
+.link-expand-ui > .button {
+}
+
+.pre-icon {
+	width : 2.5em;
+	height: 2.5em;
+	margin-right : 0.5em;
+}
+
+.link-expand .raw-link {
+	position: relative;
+}
+
+.link-expand .raw-link > div {
+	position: absolute;
+	top : 0;
+	right : 0;
+	left : 0;
+}
+
+.link-expand .raw-link a {
+	display : inline-block;
+	width : 100%;
+	overflow: hidden;
+	text-overflow : ellipsis;
+	white-space: nowrap;
+}
+
+
+.link-expand .link-expand-video,
+.link-expand .link-expand-image {
+	height: 10em;
+}
+
+.link-expand .link-expand-image {
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 3px;
+	border: 10px solid rgba(0,0,0,0.0);
+}
+
+.link-expand .link-expand-file {
+	width : 64px;
+	height: 64px;
+	background-size: contain;
+	background-repeat: none;
+}

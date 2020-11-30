@@ -1,0 +1,92 @@
+
+#chatting-with {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+[mobile] #chatting-with
+{
+	display: none;
+}
+
+#message-container {
+	width: 100%;
+	position: relative;
+}
+
+#messages {
+	position : absolute;
+	bottom : 0px;
+	max-height : 100%;
+	width : 100%;
+	overflow : auto;
+}
+
+#message-confirm {}
+#message-ph {
+	text-overflow : ellipsis;
+	white-space : nowrap;
+	overflow : hidden;
+}
+
+#input-form {
+}
+
+.avatar { align-self: flex-start; }
+.avatar .img {
+	height: 100%;
+	width: 100%;
+}
+
+.str {
+	max-width: 100%;
+	word-break: break-word;
+	white-space : pre-wrap;
+}
+
+#leeloodallasmultiline
+{
+	display: none;
+}
+
+body[mobile] #emojii-panel-button
+{
+	display: none !important;
+}
+
+
+#attachment-menu
+{
+	transition: transform 0.25s;
+	transform: scale3d(1,0,1);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.85);
+	color: white;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 10px;
+	z-index: 3;
+}
+
+#attachment-menu button
+{
+	width: 100%;
+	display: block;
+	margin: 0 0 10px 0;
+}
+
+html > body > div #attachment-menu button
+{
+	color: white;
+}
+
+#attachment-menu.Showing
+{
+	transform: scale3d(1,1,1);
+	
+}

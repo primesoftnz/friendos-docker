@@ -1,0 +1,98 @@
+#share-view {
+	width: 100%;
+	min-height: 100%;
+}
+
+#share-close {
+	position: absolute;
+	top: 0.5em;
+	right: 0.5em;
+}
+
+#share-view input {
+	width : 100%;
+}
+
+#share-invite > div {
+	margin : 0.5em 0;
+}
+
+
+#share-confirm-invalidate-container {
+	position : absolute;
+	top    : 0;
+	right  : 0;
+	bottom : 0;
+	left   : 0;
+	background-color: rgba( 0, 0, 0, 0.5 );
+}
+
+#share-confirm-invalidate-content {
+	padding       : 0.5em;
+	border-radius : 0.15em;
+	max-width     : 20em;
+}
+
+#share-confirm-invalidate-drama {
+	height: 8em;
+	width : 10em;
+	background-image: url( '/webclient/apps/FriendChat/gfx/drama.gif' );
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#share-confirm-invalidate-btns {
+	padding : 0.5em;
+}
+
+#share-confirm-invalidate {
+	
+}
+
+#share-confirm-cancel {
+	
+}
+
+.share-title {
+	font-size: 140%;
+}
+
+.share-sub-title {
+	margin-top: 0.5em;
+	font-weight: bold;
+}
+
+.description {
+	padding : 0.5em 0;
+}
+
+.invite-section > button {
+	margin-top : 0.5em;
+}
+
+.invite-container {
+	padding : 0.5em 0.3em;
+	border-radius : 2px;
+	margin-bottom : 2px;
+}
+
+.invite-container .input-wrap {
+	margin-right : 0.3em;
+}
+
+.previously-copied {
+	background-color : rgb( 150, 150, 150 );
+}
+
+.on-clipboard {
+	background-color : rgb( 81, 144, 57 );
+}
+
+.in-email {
+	background-color : rgb( 195, 192, 49 );
+}
+
+.invalid {
+	background-color : rgb( 152, 59, 37 );
+}

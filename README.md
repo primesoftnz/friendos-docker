@@ -4,7 +4,7 @@ Install docker (ubuntu): https://docs.docker.com/engine/install/ubuntu/
 Post install setting (linux only): https://docs.docker.com/engine/install/linux-postinstall/                
 docker-composer install: https://docs.docker.com/compose/install/               
                  
-<code>git clone https://gitlab.serveit.co.nz/primesoftnz/friendup-docker.git</code>           
+<code>git clone https://github.com/primesoftnz/friendos-docker.git</code>           
 <code>cd friendup-docker</code>        
 <code>git clone https://github.com/FriendUPCloud/friendup</code>          
 <code>git clone https://github.com/FriendSoftwareLabs/presence</code>         

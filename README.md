@@ -2,8 +2,17 @@
 
 Install docker (ubuntu): https://docs.docker.com/engine/install/ubuntu/             
 Post install setting (linux only): https://docs.docker.com/engine/install/linux-postinstall/                
-docker-compose install: https://docs.docker.com/compose/install/               
-                 
+docker-compose install: https://docs.docker.com/compose/install/      
+         
+NOTE: Add in /etc/hosts       
+``` 
+....       
+127.0.0.1     myfriendup.com           
+127.0.0.1     friendup            
+127.0.0.1     coturn        
+....          
+```         
+                           
 <code>git clone https://github.com/primesoftnz/friendos-docker.git</code>           
 <code>cd friendup-docker</code>        
 <code>git clone https://github.com/FriendUPCloud/friendup</code>          
@@ -11,15 +20,8 @@ docker-compose install: https://docs.docker.com/compose/install/
 <code>git clone https://github.com/FriendSoftwareLabs/friendchat</code>           
 <code>docker-compose up --build</code>      
 
-NOTE: Add     
-``` 
-....       
-127.0.0.1     myfriendup.com           
-127.0.0.1     friendup            
-127.0.0.1     coturn        
-....          
-```           
-in /etc/hosts            
+       
+         
      
 ## Useful project info:
 All settings files can be found in <code>./docker/</code> folder, inside folder, everything is split per app/dependency. (research folder)         

@@ -1,4 +1,4 @@
-# friendup-docker
+# friendos-docker
 
 Install docker (ubuntu): https://docs.docker.com/engine/install/ubuntu/             
 Post install setting (linux only): https://docs.docker.com/engine/install/linux-postinstall/                

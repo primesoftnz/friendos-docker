@@ -14,7 +14,7 @@ NOTE: Add in /etc/hosts
 ```         
                            
 <code>git clone https://github.com/primesoftnz/friendos-docker.git</code>           
-<code>cd friendup-docker</code>        
+<code>cd friendos-docker</code>        
 <code>git clone https://github.com/FriendUPCloud/friendup</code>          
 <code>git clone https://github.com/FriendSoftwareLabs/presence</code>         
 <code>git clone https://github.com/FriendSoftwareLabs/friendchat</code>           

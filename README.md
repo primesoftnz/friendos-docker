@@ -8,7 +8,7 @@ NOTE: Add in /etc/hosts
 ``` 
 ....       
 127.0.0.1     myfriendup.com           
-127.0.0.1     friendup            
+127.0.0.1     friendchat            
 127.0.0.1     coturn        
 ....          
 ```         

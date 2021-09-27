@@ -17,7 +17,8 @@ NOTE: Add in /etc/hosts
 <code>cd friendos-docker</code>        
 <code>git clone https://github.com/FriendUPCloud/friendup</code>          
 <code>git clone https://github.com/FriendSoftwareLabs/presence</code>         
-<code>git clone https://github.com/FriendSoftwareLabs/friendchat</code>           
+<code>git clone https://github.com/FriendSoftwareLabs/friendchat</code>          
+<code>git clone https://github.com/FriendUPCloud/friend-office.git</code>           
 <code>docker-compose up --build</code>      
 
        

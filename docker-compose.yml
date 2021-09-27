@@ -56,6 +56,8 @@ services:
             # FriendOS and Friend configuration
             - ./friendup:/var/www/html/friendup
             - ./docker/friendup/cfg:/var/www/html/friendup/build/cfg
+            # FriendOffice
+            - ./friend-office:/var/www/html/friend-office
             # FriendChat app
             - ./docker/friendchat/friendchat/client:/var/www/html/friendup/build/resources/webclient/apps/FriendChat
     friendchat:

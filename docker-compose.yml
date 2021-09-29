@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
     mariadb:
-        image: mariadb
+        image: mariadb:10.3
         restart: always
         container_name: mariadb_friendup
         hostname: mariadb
@@ -13,8 +13,9 @@ services:
         ports: 
             - "3306:3306"
         volumes:
-            - ./docker/mariadb:/docker-entrypoint-initdb.d/
+            - ./docker/mariadb/init:/docker-entrypoint-initdb.d/
             - ./db-data:/var/lib/mysql
+            - ./docker/mariadb/config/onlyoffice.cnf:/etc/mysql/conf.d/onlyoffice.cnf
     nginx:
         build:
             context: ./docker/nginx
@@ -29,11 +30,13 @@ services:
             - .:/var/www/html
             - ./docker/friendup/cfg/crt:/var/www/html/friendup/build/cfg/crt
             - ./docker/nginx/sites-available:/etc/nginx/sites-available
+            - ./docker/certs:/var/www/certs
         networks: 
             - friendup-network
         depends_on: 
             - friendup
             - friendchat
+            - onlyoffice
     friendup:
         build:
             context: ./docker/friendup
@@ -84,6 +87,7 @@ services:
             - ./friendchat:/var/www/html/friendchat
     onlyoffice:
         image: onlyoffice/communityserver:11.0.0.1458
+        privileged: true
         networks:
             - friendup-network
         depends_on:
@@ -123,8 +127,8 @@ services:
         container_name: onlyoffice-document-server
         image: onlyoffice/documentserver:6.0.2
         extra_hosts:
-            - "friend.serveit.co.nz:10.0.2.15"
-            - "onlyoffice.serveit.co.nz:10.0.2.15"
+            - "myfriendup.com:10.0.2.15"
+            - "onlyoffice.myfriendup.com:10.0.2.15"
         restart: always
         networks:
             - friendup-network

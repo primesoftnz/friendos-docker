@@ -9,8 +9,8 @@ if [ ! -f "$FRIEND_CORE" ]; then
 fi
 
 if [ -d "/var/www/html/friend-office" ]; then
-cd /var/www/html/friend-office
-./update_to_friend
+    cd /var/www/html/friend-office
+    ./update_to_friend.sh
 fi
 
 chown www-data:www-data -R /var/www/html/friendup
